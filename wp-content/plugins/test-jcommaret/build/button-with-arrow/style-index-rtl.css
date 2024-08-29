@@ -1,1 +1,18 @@
-.button-arrow-left .wp-block-button__link:before{content:"←";margin-left:.5em}.button-arrow-right .wp-block-button__link:after{content:"→";margin-right:.5em}.button-arrow-none .wp-block-button__link:after,.button-arrow-none .wp-block-button__link:before{content:""}
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/button-with-arrow/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.button-arrow-left .wp-block-button__link::before {
+  content: "←";
+  margin-left: 0.5em;
+}
+
+.button-arrow-right .wp-block-button__link::after {
+  content: "→";
+  margin-right: 0.5em;
+}
+
+.button-arrow-none .wp-block-button__link::before,
+.button-arrow-none .wp-block-button__link::after {
+  content: "";
+}

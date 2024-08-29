@@ -11,6 +11,7 @@ export default function Edit() {
 		'core/heading', 
 		'core/paragraph', 
 		'core/image',
+		'core/buttons',
 		'test-jcommaret/button-with-arrow'
 	];
 
@@ -20,13 +21,15 @@ export default function Edit() {
 			[ 'core/column', {}, [
 				[ 'core/heading', { placeholder: __( 'Votre titre', 'test-jcommaret' ) } ],
 				[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'test-jcommaret' ) } ],
-				[ 'test-jcommaret/button-with-arrow', {} ],
-				[ 'test-jcommaret/button-with-arrow', {} ],
-			]],
+				[ 'core/buttons', {}, [
+					[ 'test-jcommaret/button-with-arrow', {} ],
+					[ 'test-jcommaret/button-with-arrow', {} ],
+				]],
+			]], // Fin du premier 'core/column'
 			[ 'core/column', {}, [
 				[ 'core/image', { placeholder: __( 'Votre image', 'test-jcommaret' ) } ]
-			]],
-		]],
+			]], // Fin du second 'core/column'
+		]], // Fin du bloc 'core/columns'
 	];
 
 	return (
