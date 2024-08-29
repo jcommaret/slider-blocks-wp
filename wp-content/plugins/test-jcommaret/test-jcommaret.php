@@ -34,3 +34,4 @@ add_action( 'init', 'create_block_test_jcommaret_block_init' );
 add_action('enqueue_block_assets', function (): void {
     wp_enqueue_style('dashicons');
 });
+

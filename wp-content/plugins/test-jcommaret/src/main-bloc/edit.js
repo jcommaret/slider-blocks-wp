@@ -18,6 +18,7 @@ export default function Edit() {
 	// Utilisation des fonctions core de wordpress 
 	const BASE_TEMPLATE = [	
 		[ 'core/columns', {}, [
+			// Première colonne
 			[ 'core/column', {}, [
 				[ 'core/heading', { placeholder: __( 'Votre titre', 'test-jcommaret' ) } ],
 				[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'test-jcommaret' ) } ],
@@ -26,9 +27,10 @@ export default function Edit() {
 					[ 'test-jcommaret/button-with-arrow', {} ],
 				]],
 			]], // Fin du premier 'core/column'
+			// Deuxième colonne
 			[ 'core/column', {}, [
 				[ 'core/image', { placeholder: __( 'Votre image', 'test-jcommaret' ) } ]
-			]], // Fin du second 'core/column'
+			]],
 		]], // Fin du bloc 'core/columns'
 	];
 
