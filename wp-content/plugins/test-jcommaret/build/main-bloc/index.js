@@ -22,18 +22,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Edit() {
-  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({});
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
+
   // Liste des blocs autorisés
   const ALLOWED_BLOCKS = ['core/group', 'test-jcommaret/button-with-arrow', 'core/columns', 'core/column', 'core/heading', 'core/paragraph', 'core/buttons', 'core/button', 'core/image'];
 
-  // Utilisation des fonctions core de wordpress 
-  const BASE_TEMPLATE = [['core/heading', {
+  // Utilisation des fonctions core de WordPress 
+  const BASE_TEMPLATE = [['core/columns', {},
+  // Utilisation correcte de core/columns pour encapsuler core/column
+  ['core/column', {}, ['core/heading', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre titre', 'test-jcommaret')
   }], ['core/paragraph', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre contenu', 'test-jcommaret')
-  }], ['test-jcommaret/button-with-arrow', {}], ['core/image', {
+  }], ['core/buttons', {}
+  //['test-jcommaret/button-with-arrow', {}],
+  //['test-jcommaret/button-with-arrow', {}],
+  ]], ['core/column', {}, ['core/image', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre image', 'test-jcommaret')
-  }]];
+  }]]]];
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
