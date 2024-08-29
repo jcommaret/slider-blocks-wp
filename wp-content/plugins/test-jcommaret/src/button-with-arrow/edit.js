@@ -1,33 +1,38 @@
-import { __ } from '@wordpress/i18n'
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor'
+import { useBlockProps, InnerBlocks, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, SelectControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 
-export default function Edit() {
-	const blockProps = useBlockProps({ })
-	// Liste des blocs autorisés
-	const ALLOWED_BLOCKS = [ 'core/group', 'core/columns', 'core/column', 'core/heading', 'core/paragraph', 'core/buttons', 'core/button', 'core/image', 'test-jcommaret/button-with-arrow' ];
+export default function Edit(props) {
+    const { attributes, setAttributes } = props;
+    const { arrowPosition } = attributes;
 
-	// Utilisation des fonctions core de wordpress 
-	const BASE_TEMPLATE = [	
-		[ 'core/columns', {}, [
-			[ 'core/column', {}, [
-				[ 'core/heading', { placeholder: __( 'Votre titre', 'test-jcommaret' ) } ],
-				[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'test-jcommaret' ) } ],
-				[ 'core/buttons', {}, [
-					[ 'test-jcommaret/button-with-arrow', {} ],
-				]],
-			]],
-			[ 'core/column', {}, [
-				[ 'core/image', { placeholder: __( 'Votre image', 'test-jcommaret' ) } ]
-			]],
-		]],
-	];
+    const blockProps = useBlockProps();
 
-	return (
-		<section { ...blockProps }>
-			<InnerBlocks
-				template={ BASE_TEMPLATE }
-				allowedBlocks={ ALLOWED_BLOCKS }	
-			/>
-		</section>
-	)
+    return (
+        <>
+            <InspectorControls>
+                <PanelBody title={ __('Arrow Settings', 'button-arrow') }>
+                    <SelectControl
+                        label={ __('Arrow Position', 'button-arrow') }
+                        value={ arrowPosition }
+                        options={ [
+                            { label: __('None', 'button-arrow'), value: 'none' },
+                            { label: __('Left', 'button-arrow'), value: 'left' },
+                            { label: __('Right', 'button-arrow'), value: 'right' },
+                        ] }
+                        onChange={ (newPosition) => setAttributes({ arrowPosition: newPosition }) }
+                    />
+                </PanelBody>
+            </InspectorControls>
+            <div {...blockProps} className={`button-arrow button-arrow-${arrowPosition}`}>
+                <InnerBlocks
+                    allowedBlocks={['core/button']}
+                    template={[[
+                        'core/button',
+                        { content: `${arrowPosition === 'left' ? '← ' : ''}[TEXT]${arrowPosition === 'right' ? ' →' : ''}` }
+                    ]]}
+                />
+            </div>
+        </>
+    );
 }

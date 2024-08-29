@@ -24,16 +24,16 @@ __webpack_require__.r(__webpack_exports__);
 function Edit() {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)({});
   // Liste des blocs autorisés
-  const ALLOWED_BLOCKS = ['core/group', 'core/columns', 'core/column', 'core/heading', 'core/paragraph', 'core/buttons', 'core/button', 'core/image', 'test-jcommaret/button-with-arrow'];
+  const ALLOWED_BLOCKS = ['core/group', 'test-jcommaret/button-with-arrow', 'core/columns', 'core/column', 'core/heading', 'core/paragraph', 'core/buttons', 'core/button', 'core/image'];
 
   // Utilisation des fonctions core de wordpress 
-  const BASE_TEMPLATE = [['core/columns', {}, [['core/column', {}, [['core/heading', {
+  const BASE_TEMPLATE = [['core/heading', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre titre', 'test-jcommaret')
   }], ['core/paragraph', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre contenu', 'test-jcommaret')
-  }], ['test-jcommaret/button-with-arrow', {}]]], ['core/column', {}, [['core/image', {
+  }], ['test-jcommaret/button-with-arrow', {}], ['core/image', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre image', 'test-jcommaret')
-  }]]]]]];
+  }]];
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
     ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InnerBlocks, {
@@ -115,7 +115,7 @@ module.exports = window["wp"]["i18n"];
   \**********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/test-main-block","version":"0.1.0","title":"Citeo : Main Bloc","category":"widgets","icon":"menu","description":"Bloc 1","example":{},"supports":{"html":false},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/main-bloc","version":"0.1.0","title":"Citeo : Main Bloc","category":"widgets","icon":"menu","description":"Bloc 1","example":{},"supports":{"html":false},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

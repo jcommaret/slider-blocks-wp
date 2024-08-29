@@ -1,7 +1,7 @@
 {
-	"name": "test-bloc-1",
+	"name": "button-with-arrow",
 	"version": "0.1.0",
-	"description": "Citeo block 1",
+	"description": "Citeo : Button",
 	"author": "The WordPress Contributors",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",

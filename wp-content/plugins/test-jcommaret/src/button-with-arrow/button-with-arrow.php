@@ -24,14 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function create_block_test_bloc_1_block_init() {
+function create_block_button_with_arrow_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'create_block_test_bloc_1_block_init' );
-
-
-
-/*Remove class generation who are giving me headeache*/
-/**
- * Supprime les classes de mise en page globalement avec un filtre.
- */
+add_action( 'init', 'create_block_button_with_arrow_block_init' );

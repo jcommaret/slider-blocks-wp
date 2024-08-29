@@ -4,20 +4,14 @@ import { useBlockProps, InnerBlocks } from '@wordpress/block-editor'
 export default function Edit() {
 	const blockProps = useBlockProps({ })
 	// Liste des blocs autorisés
-	const ALLOWED_BLOCKS = [ 'core/group', 'core/columns', 'core/column', 'core/heading', 'core/paragraph', 'core/buttons', 'core/button', 'core/image', 'test-jcommaret/button-with-arrow' ];
+	const ALLOWED_BLOCKS = [ 'core/group', 'test-jcommaret/button-with-arrow', 'core/columns', 'core/column', 'core/heading', 'core/paragraph', 'core/buttons', 'core/button', 'core/image' ];
 
 	// Utilisation des fonctions core de wordpress 
 	const BASE_TEMPLATE = [	
-		[ 'core/columns', {}, [
-			[ 'core/column', {}, [
 				[ 'core/heading', { placeholder: __( 'Votre titre', 'test-jcommaret' ) } ],
 				[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'test-jcommaret' ) } ],
-				[ 'test-jcommaret/button-with-arrow', {} ]
-			]],
-			[ 'core/column', {}, [
+				[ 'test-jcommaret/button-with-arrow', {} ],
 				[ 'core/image', { placeholder: __( 'Votre image', 'test-jcommaret' ) } ]
-			]],
-		]],
 	];
 
 	return (

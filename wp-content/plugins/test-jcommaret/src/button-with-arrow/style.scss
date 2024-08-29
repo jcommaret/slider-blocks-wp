@@ -1,4 +1,15 @@
-.wp-block-image img {
-    max-width: 100%;
-    height: auto;
+.button-arrow .wp-block-button__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-arrow.button-arrow-left .wp-block-button__link {
+    flex-direction: row-reverse;
+}
+
+.button-arrow .button-arrow-icon {
+    margin: 0 8px;
+    color:aquamarine;
+    font-size: 40px;
 }

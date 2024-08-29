@@ -1,7 +1,7 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "test-jcommaret/test-main-block",
+  "name": "test-jcommaret/main-bloc",
   "version": "0.1.0",
   "title": "Citeo : Main Bloc",
   "category": "widgets",

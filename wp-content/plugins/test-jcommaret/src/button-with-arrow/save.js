@@ -1,11 +1,16 @@
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor'
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
-export default function save() {
-	const blockProps = useBlockProps.save();
+export default function save(props) {
+    const { attributes } = props;
+    const { arrowPosition } = attributes;
 
-	return (
-		<section { ...blockProps }>
-				<InnerBlocks.Content />
-		</section>
-	)
+    const blockProps = useBlockProps.save();
+
+    return (
+        <div {...blockProps} className={`button-arrow button-arrow-${arrowPosition}`}>
+            <InnerBlocks.Content
+                renderAppender={false}
+            />
+        </div>
+    );
 }

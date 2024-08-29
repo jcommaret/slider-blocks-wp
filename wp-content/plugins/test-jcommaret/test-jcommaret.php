@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 */
 
 function create_block_test_jcommaret_block_init() {
-	
+	register_block_type( __DIR__ . '/build/main-bloc' );
     register_block_type( __DIR__ . '/build/button-with-arrow' );
 }
 add_action( 'init', 'create_block_test_jcommaret_block_init' );
