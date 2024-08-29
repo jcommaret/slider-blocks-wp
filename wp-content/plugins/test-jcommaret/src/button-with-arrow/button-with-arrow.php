@@ -31,7 +31,6 @@ add_action( 'init', 'create_block_test_bloc_1_block_init' );
 
 
 
-
 /*Remove class generation who are giving me headeache*/
 /**
  * Supprime les classes de mise en page globalement avec un filtre.

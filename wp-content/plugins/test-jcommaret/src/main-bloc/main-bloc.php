@@ -1,14 +1,14 @@
 <?php
 /**
- * Plugin Name:       Citeo Blocks
- * Description:       Citeo Extension for bloc 1 & 2
+ * Plugin Name:       Test Bloc 1
+ * Description:       Example block scaffolded with Create Block tool.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           citeo.test
- * Author:            Jérôme Commaret
+ * Version:           0.1.0
+ * Author:            The WordPress Contributors
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       test-jcommaret
+ * Text Domain:       test-bloc-1
  *
  * @package CreateBlock
  */
@@ -23,14 +23,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  * through the block editor in the corresponding context.
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
-*/
-
-function create_block_test_jcommaret_block_init() {
-	register_block_type( __DIR__ . '/build/main-bloc' );
-    register_block_type( __DIR__ . '/build/button-with-arrow' );
+ */
+function create_block_test_bloc_1_block_init() {
+	register_block_type( __DIR__ . '/build' );
 }
-add_action( 'init', 'create_block_test_jcommaret_block_init' );
+add_action( 'init', 'create_block_test_bloc_1_block_init' );
 
-add_action('enqueue_block_assets', function (): void {
-    wp_enqueue_style('dashicons');
-});
+
+
+/*Remove class generation who are giving me headeache*/
+/**
+ * Supprime les classes de mise en page globalement avec un filtre.
+ */

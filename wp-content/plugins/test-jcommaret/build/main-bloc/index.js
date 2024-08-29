@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/button-with-arrow/edit.js":
-/*!***************************************!*\
-  !*** ./src/button-with-arrow/edit.js ***!
-  \***************************************/
+/***/ "./src/main-bloc/edit.js":
+/*!*******************************!*\
+  !*** ./src/main-bloc/edit.js ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -31,7 +31,7 @@ function Edit() {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre titre', 'test-jcommaret')
   }], ['core/paragraph', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre contenu', 'test-jcommaret')
-  }], ['core/buttons', {}, [['test-jcommaret/button-with-arrow', {}]]]]], ['core/column', {}, [['core/image', {
+  }], ['test-jcommaret/button-with-arrow', {}]]], ['core/column', {}, [['core/image', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre image', 'test-jcommaret')
   }]]]]]];
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
@@ -44,10 +44,10 @@ function Edit() {
 
 /***/ }),
 
-/***/ "./src/button-with-arrow/save.js":
-/*!***************************************!*\
-  !*** ./src/button-with-arrow/save.js ***!
-  \***************************************/
+/***/ "./src/main-bloc/save.js":
+/*!*******************************!*\
+  !*** ./src/main-bloc/save.js ***!
+  \*******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -109,13 +109,13 @@ module.exports = window["wp"]["i18n"];
 
 /***/ }),
 
-/***/ "./src/button-with-arrow/block.json":
-/*!******************************************!*\
-  !*** ./src/button-with-arrow/block.json ***!
-  \******************************************/
+/***/ "./src/main-bloc/block.json":
+/*!**********************************!*\
+  !*** ./src/main-bloc/block.json ***!
+  \**********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/button-with-arrow","version":"0.1.0","title":"Button","category":"widgets","icon":"button","description":"<- Button ->","example":{},"supports":{"html":false},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/test-main-block","version":"0.1.0","title":"Citeo : Bloc 1","category":"widgets","icon":"menu","description":"Bloc 1","example":{},"supports":{"html":false},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
@@ -188,15 +188,15 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-/*!****************************************!*\
-  !*** ./src/button-with-arrow/index.js ***!
-  \****************************************/
+/*!********************************!*\
+  !*** ./src/main-bloc/index.js ***!
+  \********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/button-with-arrow/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save */ "./src/button-with-arrow/save.js");
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/button-with-arrow/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/main-bloc/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save */ "./src/main-bloc/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/main-bloc/block.json");
 /**
  * Registers a new block provided a unique name and an object defining its behavior.
  *
