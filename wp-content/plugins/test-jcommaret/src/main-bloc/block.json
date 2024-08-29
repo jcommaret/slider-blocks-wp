@@ -8,7 +8,6 @@
 	"icon": "menu",
 	"description": "Bloc 1",
 	"example": {},
-	
 	"supports": {
 		"html": false
 	},
@@ -17,7 +16,3 @@
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"
 }
-
-
-
-

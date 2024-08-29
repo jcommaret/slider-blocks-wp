@@ -24,15 +24,13 @@ export default function Edit(props) {
                     />
                 </PanelBody>
             </InspectorControls>
-            <button {...blockProps} className={`button-arrow button-arrow-${arrowPosition}`}>
+            
+            <div {...blockProps} className={`button-arrow button-arrow-${arrowPosition}`}>
                 <InnerBlocks
                     allowedBlocks={['core/button']}
-                    template={[[
-                        'core/button',
-                        { content: `${arrowPosition === 'left' ? '← ' : ''}[TEXT]${arrowPosition === 'right' ? ' →' : ''}` }
-                    ]]}
+                    template={[['core/button']]}
                 />
-            </button>
+            </div>
         </>
     );
 }

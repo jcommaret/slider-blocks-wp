@@ -1,15 +1,14 @@
-.button-arrow .wp-block-button__link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.button-arrow-left .wp-block-button__link::before {
+    content: "←";
+    margin-right: 0.5em;
 }
 
-.button-arrow.button-arrow-left .wp-block-button__link {
-    flex-direction: row-reverse;
+.button-arrow-right .wp-block-button__link::after {
+    content: "→";
+    margin-left: 0.5em;
 }
 
-.button-arrow .button-arrow-icon {
-    margin: 0 8px;
-    color:aquamarine;
-    font-size: 40px;
+.button-arrow-none .wp-block-button__link::before,
+.button-arrow-none .wp-block-button__link::after {
+    content: "";
 }

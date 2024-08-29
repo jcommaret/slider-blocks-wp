@@ -3,22 +3,13 @@
 	"apiVersion": 3,
 	"name": "test-jcommaret/button-with-arrow",
 	"version": "0.1.0",
-	"title": "Buttoni",
+	"title": "Button with arrow",
 	"category": "widgets",
 	"icon": "button",
 	"description": "A button with an optional arrow on the left or right.",
 	"example": {},
-	
-	"supports": {
-		"html": false
-	},
-	
 	"textdomain": "test-jcommaret",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"
-	
-	
 }
-
-
