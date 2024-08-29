@@ -115,7 +115,7 @@ module.exports = window["wp"]["i18n"];
   \**********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/test-main-block","version":"0.1.0","title":"Citeo : Bloc 1","category":"widgets","icon":"menu","description":"Bloc 1","example":{},"supports":{"html":false},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/test-main-block","version":"0.1.0","title":"Citeo : Main Bloc","category":"widgets","icon":"menu","description":"Bloc 1","example":{},"supports":{"html":false},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
