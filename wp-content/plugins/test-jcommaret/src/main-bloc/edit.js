@@ -12,7 +12,8 @@ export default function Edit() {
 		'core/paragraph', 
 		'core/image',
 		'core/buttons',
-		'test-jcommaret/button-with-arrow'
+		'test-jcommaret/button-with-arrow',
+		'test-jcommaret/slider'
 	];
 
 	// Utilisation des fonctions core de wordpress 
@@ -31,7 +32,8 @@ export default function Edit() {
 			[ 'core/column', {}, [
 				[ 'core/image', { placeholder: __( 'Votre image', 'test-jcommaret' ) } ]
 			]],
-		]], // Fin du bloc 'core/columns'
+		]],
+		['test-jcommaret/slider', {}] // Fin du bloc 'core/columns'
 	];
 
 	return (
