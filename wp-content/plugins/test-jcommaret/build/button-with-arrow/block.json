@@ -7,7 +7,17 @@
   "category": "widgets",
   "icon": "button",
   "description": "A button with an optional arrow on the left or right.",
-  "example": {},
+  "attributes": {
+    "arrowPosition": {
+      "type": "string",
+      "default": "none"
+    }
+  },
+  "example": {
+    "attributes": {
+      "arrowPosition": "right"
+    }
+  },
   "textdomain": "test-jcommaret",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

@@ -1,24 +1,19 @@
-/**
- * React hook that is used to mark the block wrapper element.
- * It provides all the necessary props like the class name.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
- */
 import { useBlockProps } from '@wordpress/block-editor';
 
-/**
- * The save function defines the way in which the different attributes should
- * be combined into the final markup, which is then serialized by the block
- * editor into `post_content`.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-edit-save/#save
- *
- * @return {Element} Element to render.
- */
-export default function save() {
-	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Slider – hello from the saved content!' }
-		</p>
-	);
+export default function save({ attributes }) {
+    const { images } = attributes;
+
+    return (
+        <div {...useBlockProps.save()} className="my-slider-gallery">
+            <div className="slides">
+                {images.map((image, index) => (
+                    <div key={image.id} className={`slide ${index === 0 ? 'active' : ''}`}>
+                        <img src={image.url} alt={image.alt} />
+                    </div>
+                ))}
+            </div>
+            <button className="slider-button-prev">Previous</button>
+            <button className="slider-button-next">Next</button>
+        </div>
+    );
 }

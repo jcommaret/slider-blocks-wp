@@ -6,7 +6,9 @@ export default function Edit(props) {
     const { attributes, setAttributes } = props;
     const { arrowPosition } = attributes;
 
-    const blockProps = useBlockProps();
+    const blockProps = useBlockProps({
+        className: `button-arrow button-arrow-${arrowPosition}`,
+    });
 
     return (
         <>
@@ -25,7 +27,7 @@ export default function Edit(props) {
                 </PanelBody>
             </InspectorControls>
             
-            <div {...blockProps} className={`button-arrow button-arrow-${arrowPosition}`}>
+            <div {...blockProps}>
                 <InnerBlocks
                     allowedBlocks={['core/button']}
                     template={[['core/button']]}
@@ -34,3 +36,4 @@ export default function Edit(props) {
         </>
     );
 }
+

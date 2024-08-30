@@ -25,7 +25,7 @@ function Edit() {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)();
 
   // Liste des blocs autorisés
-  const ALLOWED_BLOCKS = ['core/columns', 'core/column', 'core/heading', 'core/paragraph', 'core/image', 'core/buttons', 'test-jcommaret/button-with-arrow', 'test-jcommaret/slider'];
+  const ALLOWED_BLOCKS = ['core/columns', 'core/column', 'core/heading', 'core/paragraph', 'core/image', 'test-jcommaret/button-with-arrow', 'test-jcommaret/slider'];
 
   // Utilisation des fonctions core de wordpress 
   const BASE_TEMPLATE = [['core/columns', {}, [
@@ -34,7 +34,7 @@ function Edit() {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre titre', 'test-jcommaret')
   }], ['core/paragraph', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Votre contenu', 'test-jcommaret')
-  }], ['core/buttons', {}, [['test-jcommaret/button-with-arrow', {}], ['test-jcommaret/button-with-arrow', {}]]]]],
+  }], ['test-jcommaret/button-with-arrow', {}]]],
   // Fin du premier 'core/column'
   // Deuxième colonne
   ['core/column', {}, [['core/image', {
