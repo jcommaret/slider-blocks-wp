@@ -3,40 +3,16 @@
   "apiVersion": 3,
   "name": "test-jcommaret/slider",
   "version": "0.1.0",
-  "title": "Slider Gallery",
+  "title": "Citeo Slider",
   "category": "widgets",
   "icon": "images-alt2",
   "description": "A dynamic image slider using the core gallery block.",
   "supports": {
     "html": false
   },
-  "attributes": {
-    "images": {
-      "type": "array",
-      "source": "query",
-      "selector": ".blocks-gallery-item",
-      "query": {
-        "url": {
-          "source": "attribute",
-          "selector": "img",
-          "attribute": "src"
-        },
-        "alt": {
-          "source": "attribute",
-          "selector": "img",
-          "attribute": "alt"
-        },
-        "id": {
-          "source": "attribute",
-          "selector": "img",
-          "attribute": "data-id"
-        }
-      },
-      "default": []
-    }
-  },
   "textdomain": "test-jcommaret",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+  "style": "file:./style-index.css",
+  "script": "file:./slider.js"
 }

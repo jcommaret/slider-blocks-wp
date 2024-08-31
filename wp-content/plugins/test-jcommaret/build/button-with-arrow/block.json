@@ -3,19 +3,24 @@
   "apiVersion": 3,
   "name": "test-jcommaret/button-with-arrow",
   "version": "0.1.0",
-  "title": "Button with arrow",
+  "title": "Citeo - Button",
   "category": "widgets",
   "icon": "button",
   "description": "A button with an optional arrow on the left or right.",
   "attributes": {
     "arrowPosition": {
       "type": "string",
-      "default": "none"
+      "default": "right"
+    },
+    "text": {
+      "type": "string",
+      "default": ""
     }
   },
   "example": {
     "attributes": {
-      "arrowPosition": "right"
+      "arrowPosition": "right",
+      "text": "Cliquez ici"
     }
   },
   "textdomain": "test-jcommaret",

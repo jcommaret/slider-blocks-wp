@@ -215,7 +215,7 @@ module.exports = window["wp"]["i18n"];
   \******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/button-with-arrow","version":"0.1.0","title":"Button with arrow","category":"widgets","icon":"button","description":"A button with an optional arrow on the left or right.","attributes":{"arrowPosition":{"type":"string","default":"none"}},"example":{"attributes":{"arrowPosition":"right"}},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/button-with-arrow","version":"0.1.0","title":"Citeo - Button","category":"widgets","icon":"button","description":"A button with an optional arrow on the left or right.","attributes":{"arrowPosition":{"type":"string","default":"right"},"text":{"type":"string","default":""}},"example":{"attributes":{"arrowPosition":"right","text":"Cliquez ici"}},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

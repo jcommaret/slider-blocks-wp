@@ -1,31 +1,37 @@
-.my-slider {
-	display: flex;
-	overflow: hidden;
-	position: relative;
+// Mixin pour les styles des boutons du slider
+@mixin slider-button-styles($direction) {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    left: if($direction == 'prev', 10px, auto); 
+    right: if($direction == 'next', 10px, auto); 
 }
 
-.my-slider > * {
-	flex: 0 0 100%;
-	transition: transform 0.5s ease-in-out;
+.citeo-slider {
+    position: relative;
+    width: 100%;
 }
 
-.slider-prev,
-.slider-next {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background-color: rgba(0, 0, 0, 0.5);
-	color: #fff;
-	border: none;
-	padding: 10px;
-	cursor: pointer;
-	z-index: 1;
+.blocks-gallery-item {
+    display: none; /* Masquer toutes les slides par défaut */
+    width: 100%;
+    & img {
+        width: 100%; /* S'assurer que les images prennent toute la largeur du conteneur */
+        height: auto; 
+    }
 }
 
-.slider-prev {
-	left: 10px;
-}
-
-.slider-next {
-	right: 10px;
+.slider-button {
+    &-prev {
+        @include slider-button-styles('prev');
+    }
+    &-next {
+        @include slider-button-styles('next');
+    }
 }

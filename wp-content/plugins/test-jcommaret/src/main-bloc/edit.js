@@ -26,10 +26,9 @@ export default function Edit() {
 			]], // Fin du premier 'core/column'
 			// Deuxième colonne
 			[ 'core/column', {}, [
-				[ 'core/image', { placeholder: __( 'Votre image', 'test-jcommaret' ) } ]
+				[ 'core/image', { placeholder: __( 'Votre image', 'test-jcommaret' ) } ],
 			]],
 		]],
-		['test-jcommaret/slider', {}] // Fin du bloc 'core/columns'
 	];
 
 	return (

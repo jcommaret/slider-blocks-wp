@@ -3,10 +3,10 @@
 	"apiVersion": 3,
 	"name": "test-jcommaret/main-bloc",
 	"version": "0.1.0",
-	"title": "Citeo : Main Bloc",
+	"title": "Citeo - Bloc 1",
 	"category": "widgets",
 	"icon": "menu",
-	"description": "Bloc 1",
+	"description": "Text & Image & CTA",
 	"example": {},
 	"supports": {
 		"html": false

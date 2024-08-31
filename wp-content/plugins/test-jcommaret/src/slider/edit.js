@@ -1,46 +1,17 @@
-import { __ } from "@wordpress/i18n";
-import { useBlockProps, MediaPlaceholder } from "@wordpress/block-editor";
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
-export default function Edit({ attributes, setAttributes }) {
-	const blockProps = useBlockProps();
-	const { images } = attributes;
+const ALLOWED_BLOCKS = ['core/gallery'];
 
-	const onSelectImages = (newImages) => {
-		setAttributes({
-			images: newImages.map((image) => ({
-				id: image.id,
-				url: image.url,
-				alt: image.alt,
-			})),
-		});
-	};
+export default function Edit() {
+    const blockProps = useBlockProps();
 
-	return (
-		<div {...blockProps}>
-			{images.length > 0 ? (
-				<ul className="blocks-gallery-grid">
-					{images.map((image) => (
-						<li key={image.id} className="blocks-gallery-item">
-							<img src={image.url} alt={image.alt} data-id={image.id} />
-						</li>
-					))}
-				</ul>
-			) : (
-				<MediaPlaceholder
-					icon="format-gallery"
-					labels={{
-						title: __("Add Images to Slider", "test-jcommaret"),
-						instructions: __(
-							"Select images for your slider.",
-							"test-jcommaret",
-						),
-					}}
-					onSelect={onSelectImages}
-					allowedTypes={["image"]}
-					multiple
-					gallery
-				/>
-			)}
-		</div>
-	);
+    return (
+        <div {...blockProps}>
+            <InnerBlocks
+                allowedBlocks={ALLOWED_BLOCKS}
+                template={[['core/gallery']]}
+                templateLock={true} // Permet d'ajouter plusieurs galeries ou d'autres blocs si besoin
+            />
+        </div>
+    );
 }
