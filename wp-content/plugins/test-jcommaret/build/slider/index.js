@@ -52,11 +52,11 @@ function Edit({
   })))) : (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.MediaPlaceholder, {
     icon: "format-gallery",
     labels: {
-      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Add Images to Slider', 'test-jcommaret'),
-      instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Select images for your slider.', 'test-jcommaret')
+      title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Add Images to Slider", "test-jcommaret"),
+      instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)("Select images for your slider.", "test-jcommaret")
     },
     onSelect: onSelectImages,
-    allowedTypes: ['image'],
+    allowedTypes: ["image"],
     multiple: true,
     gallery: true
   }));
@@ -248,6 +248,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   const galleries = document.querySelectorAll(".my-slider-gallery");
   const slides = document.querySelectorAll(".slides");
+  let currentIndex = 0;
 
   // Créer des événements pour les boutons pour aller vers la suite ou précédemment
   const nextButton = document.createElement("button");
@@ -258,10 +259,10 @@ document.addEventListener("DOMContentLoaded", function () {
   prevButton.textContent = "Previous";
   prevButton.className = "slider-button-rev";
   prevButton.addEventListener("click", goToPreviousSlide);
-  galleries.forEach(function (gallery) {
+  galleries.forEach(function (gallery, index) {
     nextButton.style.display = "none";
     gallery.appendChild(nextButton);
-    slides.forEach(function (slide, index) {
+    slides.forEach((slide, i) => {
       slide.style.display = "none";
       gallery.appendChild(slide);
 

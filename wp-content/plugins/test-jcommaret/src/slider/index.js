@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	const galleries = document.querySelectorAll(".my-slider-gallery");
 	const slides = document.querySelectorAll(".slides");
 
+	let currentIndex = 0;
+
 	// Créer des événements pour les boutons pour aller vers la suite ou précédemment
 	const nextButton = document.createElement("button");
 	nextButton.textContent = "Next";
@@ -25,11 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	prevButton.className = "slider-button-rev";
 	prevButton.addEventListener("click", goToPreviousSlide);
 
-	galleries.forEach(function (gallery) {
+	galleries.forEach(function (gallery, index) {
 		nextButton.style.display = "none";
 		gallery.appendChild(nextButton);
 
-		slides.forEach(function (slide, index) {
+		slides.forEach((slide, i) => {
 			slide.style.display = "none";
 			gallery.appendChild(slide);
 
