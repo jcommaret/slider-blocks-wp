@@ -1,12 +1,8 @@
-import { useBlockProps, InnerBlocks, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, SelectControl } from '@wordpress/components';
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 import { __ } from '@wordpress/i18n';
 
-export default function Edit(props) {
-    const { attributes, setAttributes } = props;
-	const { mediaPosition = 'right' } = attributes;
-	
-	const blockProps = useBlockProps();
+export default function Edit() {
+    const blockProps = useBlockProps();
 
 	const blocksAllowed = [
 		'core/heading',
@@ -23,22 +19,9 @@ export default function Edit(props) {
 			[ 'test-jcommaret/button-with-arrow', {} ],
 		]],
 	];
-
 	
-
-
-
     return (
         <>
-			<InspectorControls>
-                <PanelBody>
-                    <SelectControl
-                        value={ mediaPosition }
-						onChange={ handleMediaPositionChange } 
-                    />
-                </PanelBody>
-            </InspectorControls>
-			
             <div {...blockProps}>				
 				<InnerBlocks			
                     allowedBlocks={blocksAllowed}

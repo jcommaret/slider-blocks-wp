@@ -4,21 +4,19 @@
   "name": "test-jcommaret/main-bloc",
   "version": "0.1.0",
   "title": "Citeo - TopBloc",
-  "category": "widgets",
   "icon": "menu",
   "description": "Text & Image & CTA",
+  "example": {},
+  "category": "layout",
   "attributes": {
     "mediaPosition": {
       "type": "string",
-      "default": "left"
+      "default": "right"
     }
-  },
-  "example": {},
-  "supports": {
-    "html": false
   },
   "textdomain": "test-jcommaret",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+  "style": "file:./style-index.css",
+  "script": "file:./view.js"
 }
