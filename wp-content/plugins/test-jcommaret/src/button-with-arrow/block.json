@@ -10,17 +10,7 @@
 	"attributes": {
         "arrowPosition": {
             "type": "string",
-            "default": "right"
-        },
-		"text": {
-            "type": "string",
-            "default": ""
-        }
-    },
-    "example": {
-        "attributes": {
-            "arrowPosition": "right",
-			"text":"Cliquez ici"
+            "default": "none"
         }
     },
 	"textdomain": "test-jcommaret",

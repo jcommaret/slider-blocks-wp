@@ -13,14 +13,14 @@ export default function Edit(props) {
     return (
         <>
             <InspectorControls>
-                <PanelBody title={ __('Arrow Settings', 'button-arrow') }>
+                <PanelBody title={ __('Réglages de flêche', 'button-arrow') }>
                     <SelectControl
-                        label={ __('Arrow Position', 'button-arrow') }
+                        label={ __('Position de la flêche', 'button-arrow') }
                         value={ arrowPosition }
                         options={ [
-                            { label: __('None', 'button-arrow'), value: 'none' },
-                            { label: __('Left', 'button-arrow'), value: 'left' },
-                            { label: __('Right', 'button-arrow'), value: 'right' },
+                            { label: __('Pas de flêche', 'button-arrow'), value: 'none' },
+                            { label: __('Gauche', 'button-arrow'), value: 'left' },
+                            { label: __('Droite', 'button-arrow'), value: 'right' },
                         ] }
                         onChange={ (newPosition) => setAttributes({ arrowPosition: newPosition }) }
                     />
