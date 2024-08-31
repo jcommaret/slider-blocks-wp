@@ -1,44 +1,50 @@
-import { __ } from '@wordpress/i18n'
-import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import { useBlockProps, InnerBlocks, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, SelectControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 
-export default function Edit() {
-    const blockProps = useBlockProps();
+export default function Edit(props) {
+    const { attributes, setAttributes } = props;
+	const { mediaPosition = 'right' } = attributes;
 	
-	// Liste des blocs autorisés
-	const ALLOWED_BLOCKS = [ 
-		'core/columns', 
-		'core/column', 
-		'core/heading', 
-		'core/paragraph', 
-		'core/image',
-		'test-jcommaret/button-with-arrow',
-		'test-jcommaret/slider'
-	];
+	const blockProps = useBlockProps();
 
-	// Utilisation des fonctions core de wordpress 
-	const BASE_TEMPLATE = [	
-		[ 'core/columns', {}, [
-			// Première colonne
-			[ 'core/column', {}, [
-				[ 'core/heading', { placeholder: __( 'Votre titre', 'test-jcommaret' ) } ],
-				[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'test-jcommaret' ) } ],
-				[ 'test-jcommaret/button-with-arrow', {} ],
-			]], // Fin du premier 'core/column'
-			// Deuxième colonne
-			[ 'core/column', {}, [
-				[ 'core/image', { placeholder: __( 'Votre image', 'test-jcommaret' ) } ],
-			]],
+	const blocksAllowed = [
+		'core/heading',
+		'core/paragraph',
+		'core/media-text',
+		'core/buttons',
+			'test-jcommaret/button-with-arrow',
+	]
+	
+	const template = [	
+		[ 'core/media-text', {}, [
+			[ 'core/heading', {} ],	
+			[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'test-jcommaret' ) } ],		
+			[ 'test-jcommaret/button-with-arrow', {} ],
 		]],
 	];
 
-	return (
-		<>
-			<section { ...blockProps }>
-				<InnerBlocks
-					template={ BASE_TEMPLATE }
-					allowedBlocks={ ALLOWED_BLOCKS }	
-				/>
-			</section>
-		</>
-	)
+	
+
+
+
+    return (
+        <>
+			<InspectorControls>
+                <PanelBody>
+                    <SelectControl
+                        value={ mediaPosition }
+						onChange={ handleMediaPositionChange } 
+                    />
+                </PanelBody>
+            </InspectorControls>
+			
+            <div {...blockProps}>				
+				<InnerBlocks			
+                    allowedBlocks={blocksAllowed}
+                    template={template}
+                />
+            </div>
+        </>
+    );
 }

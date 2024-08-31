@@ -6,12 +6,12 @@ export default function Edit() {
     const blockProps = useBlockProps();
 
     return (
-        <div {...blockProps}>
+        <section {...blockProps} className="custom-slider" >
             <InnerBlocks
                 allowedBlocks={ALLOWED_BLOCKS}
                 template={[['core/gallery']]}
-                templateLock={true} // Permet d'ajouter plusieurs galeries ou d'autres blocs si besoin
+                templateLock={false} // Permet d'ajouter plusieurs galeries ou d'autres blocs si besoin
             />
-        </div>
+        </section>
     );
 }

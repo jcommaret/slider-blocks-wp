@@ -21,12 +21,13 @@ __webpack_require__.r(__webpack_exports__);
 const ALLOWED_BLOCKS = ['core/gallery'];
 function Edit() {
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)();
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...blockProps
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+    ...blockProps,
+    className: "custom-slider"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
     allowedBlocks: ALLOWED_BLOCKS,
     template: [['core/gallery']],
-    templateLock: true // Permet d'ajouter plusieurs galeries ou d'autres blocs si besoin
+    templateLock: false // Permet d'ajouter plusieurs galeries ou d'autres blocs si besoin
   }));
 }
 

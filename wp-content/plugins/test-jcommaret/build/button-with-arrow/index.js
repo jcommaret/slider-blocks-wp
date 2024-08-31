@@ -36,18 +36,18 @@ function Edit(props) {
     className: `button-arrow button-arrow-${arrowPosition}`
   });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.PanelBody, {
-    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Arrow Settings', 'button-arrow')
+    title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Réglages de flêche', 'button-arrow')
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
-    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Arrow Position', 'button-arrow'),
+    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Position de la flêche', 'button-arrow'),
     value: arrowPosition,
     options: [{
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('None', 'button-arrow'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Pas de flêche', 'button-arrow'),
       value: 'none'
     }, {
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Left', 'button-arrow'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Gauche', 'button-arrow'),
       value: 'left'
     }, {
-      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Right', 'button-arrow'),
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Droite', 'button-arrow'),
       value: 'right'
     }],
     onChange: newPosition => setAttributes({
@@ -215,7 +215,7 @@ module.exports = window["wp"]["i18n"];
   \******************************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/button-with-arrow","version":"0.1.0","title":"Citeo - Button","category":"widgets","icon":"button","description":"A button with an optional arrow on the left or right.","attributes":{"arrowPosition":{"type":"string","default":"right"},"text":{"type":"string","default":""}},"example":{"attributes":{"arrowPosition":"right","text":"Cliquez ici"}},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/button-with-arrow","version":"0.1.0","title":"Citeo - Button","category":"widgets","icon":"button","description":"A button with an optional arrow on the left or right.","attributes":{"arrowPosition":{"type":"string","default":"none"}},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
