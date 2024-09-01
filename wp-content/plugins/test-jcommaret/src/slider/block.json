@@ -4,7 +4,7 @@
 	"name": "test-jcommaret/slider",
 	"version": "0.1.0",
 	"title": "Citeo Slider",
-	"category": "widgets",
+	"category": "layout",
 	"icon": "images-alt2",
 	"description": "A dynamic image slider using the core gallery block.",
 	"supports": {

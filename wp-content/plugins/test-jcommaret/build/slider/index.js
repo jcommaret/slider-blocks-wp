@@ -135,7 +135,7 @@ module.exports = window["wp"]["blocks"];
   \*******************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/slider","version":"0.1.0","title":"Citeo Slider","category":"widgets","icon":"images-alt2","description":"A dynamic image slider using the core gallery block.","supports":{"html":false},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/slider","version":"0.1.0","title":"Citeo Slider","category":"layout","icon":"images-alt2","description":"A dynamic image slider using the core gallery block.","supports":{"html":false},"textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./view.js"}');
 
 /***/ })
 

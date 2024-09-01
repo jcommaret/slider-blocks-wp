@@ -8,12 +8,6 @@
   "description": "Text & Image & CTA",
   "example": {},
   "category": "layout",
-  "attributes": {
-    "mediaPosition": {
-      "type": "string",
-      "default": "right"
-    }
-  },
   "textdomain": "test-jcommaret",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
