@@ -1,16 +1,16 @@
-// Mixin pour les styles des boutons du slider
+// Slider button Mixin
 @mixin slider-button-styles($direction) {
     position: absolute;
+    z-index: /* 🚀 Buzz lightyear loves this one */ calc(infinity + 1);   
     top: 50%;
+    left: if($direction == 'prev', -10px, auto);
+    right: if($direction == 'next', -10px, auto);
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
     padding: 10px;
+    border: none;
+    background-color: #000;
     cursor: pointer;
-    z-index: 10;
-    left: if($direction == 'prev', 10px, auto); 
-    right: if($direction == 'next', 10px, auto); 
+    color: #FFF;
 }
 
 .citeo-slider {
@@ -19,10 +19,10 @@
 }
 
 .blocks-gallery-item {
-    display: none; /* Masquer toutes les slides par défaut */
+    display: none; 
     width: 100%;
     & img {
-        width: 100%; /* S'assurer que les images prennent toute la largeur du conteneur */
+        width: 100%; 
         height: auto; 
     }
 }

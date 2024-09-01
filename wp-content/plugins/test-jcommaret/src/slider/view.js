@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
 
         const nextButton = document.createElement('button');
-        nextButton.textContent = 'Next';
+        nextButton.textContent = '>';
         nextButton.className = 'slider-button-next wp-block-button';
 
         const prevButton = document.createElement('button');
-        prevButton.textContent = 'Previous';
+        prevButton.textContent = '<';
         prevButton.className = 'slider-button-prev wp-block-button';
 
         gallery.appendChild(nextButton);
@@ -25,13 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
         nextButton.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % slides.length;
             showSlide(currentIndex);
-            console.log("next")
         });
 
         prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + slides.length) % slides.length;
             showSlide(currentIndex);
-            console.log("prev")
+            
         });
 
         // Afficher la première slide

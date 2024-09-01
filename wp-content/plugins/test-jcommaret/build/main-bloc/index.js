@@ -26,9 +26,10 @@ function Edit() {
   const blocksAllowed = ['core/heading', 'core/paragraph', 'core/media-text', 'core/buttons', 'test-jcommaret/button-with-arrow'];
   const template = [['core/media-text', {}, [['core/heading', {}], ['core/paragraph', {
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Votre contenu', 'test-jcommaret')
-  }], ['test-jcommaret/button-with-arrow', {}]]]];
-  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...blockProps
+  }], ['core/buttons', {}, [['test-jcommaret/button-with-arrow', {}], ['test-jcommaret/button-with-arrow', {}]]]]]];
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("section", {
+    ...blockProps,
+    className: "main-bloc"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
     allowedBlocks: blocksAllowed,
     template: template
@@ -146,7 +147,7 @@ module.exports = window["wp"]["i18n"];
   \**********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/main-bloc","version":"0.1.0","title":"Citeo - TopBloc","icon":"menu","description":"Text & Image & CTA","example":{},"category":"layout","textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","script":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/main-bloc","version":"0.1.0","title":"Citeo - TopBloc","icon":"media-text","description":"Text & Image & CTA","example":{},"category":"layout","textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

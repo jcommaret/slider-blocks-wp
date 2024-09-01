@@ -16,18 +16,22 @@ export default function Edit() {
 		[ 'core/media-text', {}, [
 			[ 'core/heading', {} ],	
 			[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'test-jcommaret' ) } ],		
-			[ 'test-jcommaret/button-with-arrow', {} ],
+			[ 'core/buttons', {}, [
+				[ 'test-jcommaret/button-with-arrow', {} ],
+				[ 'test-jcommaret/button-with-arrow', {} ],
+			]],
+	
 		]],
 	];
 	
     return (
         <>
-            <div {...blockProps}>				
+            <section {...blockProps} className="main-bloc">				
 				<InnerBlocks			
                     allowedBlocks={blocksAllowed}
                     template={template}
                 />
-            </div>
+            </section>
         </>
     );
 }

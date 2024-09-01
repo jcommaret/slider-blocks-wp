@@ -4,7 +4,7 @@ export default function save() {
 	const blockProps = useBlockProps.save();
 
 	return (
-		<section { ...blockProps } className='main-bloc'>
+		<section { ...blockProps } className="main-bloc">
 				<InnerBlocks.Content />
 		</section>
 	)
