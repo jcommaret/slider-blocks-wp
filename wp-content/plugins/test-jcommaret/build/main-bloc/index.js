@@ -147,7 +147,7 @@ module.exports = window["wp"]["i18n"];
   \**********************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/main-bloc","version":"0.1.0","title":"Citeo - TopBloc","icon":"media-text","description":"Text & Image & CTA","example":{},"category":"layout","textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"test-jcommaret/main-bloc","version":"0.1.0","title":"Citeo Top Bloc","icon":"media-text","description":"Text & Image & CTA","example":{},"category":"layout","textdomain":"test-jcommaret","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

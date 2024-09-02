@@ -23,3 +23,16 @@ function register_blocks() {
 }
 
 add_action( 'init', 'register_blocks' );
+
+
+function citeo_allowed_blocks( $allowed_blocks, $editor_context ) {
+    // Liste des blocs autorisés
+    $allowed_blocks = array(
+        'test-jcommaret/slider',
+        'test-jcommaret/main-bloc',
+        'test-jcommaret/button-with-arrow'
+    );
+    return $allowed_blocks;
+}
+
+add_filter( 'allowed_block_types_all', 'citeo_allowed_blocks', 10, 2 );

@@ -1,4 +1,5 @@
 // Slider button Mixin
+
 .citeo-slider {
     display:flex;
     flex-direction: row;
@@ -10,10 +11,10 @@
     figure{
         &.wp-block-gallery-is-layout-flex{
             order:2;
-            
         }
     }
     .slider-button {
+
         &-prev {
             height:40px;
             margin-top :240px;
