@@ -1,4 +1,14 @@
-// Slider button Mixin
+@mixin slider-button($order) {
+    order: $order;
+    height: 40px;
+    margin-top: 240px;
+    z-index: infinity;   
+    padding: 10px;
+    border: none;
+    background-color: #000;
+    cursor: pointer;
+    color: #FFF;
+}
 
 .citeo-slider {
     display:flex;
@@ -13,28 +23,13 @@
             order:2;
         }
     }
+    // Utilisation du mixin
     .slider-button {
-
         &-prev {
-            height:40px;
-            margin-top :240px;
-            z-index: infinity;   
-            padding: 10px;
-            border: none;
-            background-color: #000;
-            cursor: pointer;
-            color: #FFF;
-        }&-next {
-            order:3;
-            height:40px;
-            margin-top :240px;
-            z-index: infinity;   
-            left: -10px;
-            padding: 10px;
-            border: none;
-            background-color: #000;
-            cursor: pointer;
-            color: #FFF;
+            @include slider-button(1);
+        }
+        &-next {
+            @include slider-button(3);
         }
     }
 }
