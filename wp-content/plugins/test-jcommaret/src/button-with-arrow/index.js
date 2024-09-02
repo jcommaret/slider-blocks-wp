@@ -1,40 +1,20 @@
-/**
- * Registers a new block provided a unique name and an object defining its behavior.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
+// Importing the necessary functions and components from WordPress
 import { registerBlockType } from '@wordpress/blocks';
 
-import "./style.scss";
-/**
- * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
- * All files containing `style` keyword are bundled together. The code used
- * gets applied both to the front of your site and to the editor.
- *
- * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
- */
-
-/**
- * Internal dependencies
- */
+// Importing the Edit and Save components for the block
 import Edit from './edit';
 import save from './save';
+// Importing metadata for the block from a JSON file
 import metadata from './block.json';
 
-/**
- * Every block starts by registering a new block type definition.
- *
- * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
- */
-registerBlockType( metadata.name, {
-	/**
-	 * @see ./edit.js
-	 */
-	edit: Edit,
+// Importing the styles for the block
+import "./style.scss";
 
-	/**
-	 * @see ./save.js
-	 */
+// Registering a new block type with the specified metadata
+registerBlockType( metadata.name, {
+	// Specifying the edit component for the block
+	edit: Edit,
+	// Specifying the save component for the block
 	save,
 } );
 
