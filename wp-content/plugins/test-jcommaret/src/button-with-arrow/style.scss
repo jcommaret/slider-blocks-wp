@@ -1,14 +1,21 @@
-.button-arrow-left .wp-block-button__link::before {
-    content: "←";
-    margin-right: 0.5em;
+// Définition des variables
+$arrow-margin: 0 0.5em;
+$arrow-left: "←";
+$arrow-right: "→";
+
+// Mixin pour ajouter les flèches
+@mixin arrow-style($position) {
+    &::#{$position} {
+        margin: $arrow-margin;
+        content: if($position == "before", $arrow-left, $arrow-right);
+    }
 }
 
-.button-arrow-right .wp-block-button__link::after {
-    content: "→";
-    margin-left: 0.5em;
-}
-
-.button-arrow-none .wp-block-button__link::before,
-.button-arrow-none .wp-block-button__link::after {
-    content: "";
+.button-arrow-left,
+.button-arrow-right {
+    .wp-block-button__link {
+        // Application du mixin pour les flèches
+        @include arrow-style(before); // pour .button-arrow-left
+        @include arrow-style(after);  // pour .button-arrow-right
+    }
 }

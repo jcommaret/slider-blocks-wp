@@ -10,7 +10,7 @@ export default function Edit() {
             <InnerBlocks
                 allowedBlocks={ALLOWED_BLOCKS}
                 template={[['core/gallery']]}
-                templateLock={false} // Permet d'ajouter plusieurs galeries ou d'autres blocs si besoin
+                templateLock={false} 
             />
         </section>
     );

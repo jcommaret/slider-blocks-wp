@@ -27,7 +27,7 @@ function Edit() {
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, {
     allowedBlocks: ALLOWED_BLOCKS,
     template: [['core/gallery']],
-    templateLock: false // Permet d'ajouter plusieurs galeries ou d'autres blocs si besoin
+    templateLock: false
   }));
 }
 
