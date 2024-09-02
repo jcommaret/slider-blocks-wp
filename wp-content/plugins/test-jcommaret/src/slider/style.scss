@@ -1,34 +1,51 @@
 @mixin slider-button($order) {
+    // Sets the order of the button in the flex container
     order: $order;
+    // Fixed height for the button
     height: 40px;
+    // Margin from the top
     margin-top: 240px;
+    // Sets the stacking order of the button
     z-index: infinity;   
+    // Padding inside the button
     padding: 10px;
+    // No border for the button
     border: none;
+    // Background color of the button
     background-color: #000;
+    // Cursor style when hovering over the button
     cursor: pointer;
+    // Text color of the button
     color: #FFF;
 }
 
 .citeo-slider {
+    // Flex container for the slider
     display:flex;
+    // Direction of the flex items
     flex-direction: row;
     .wp-block-image{
+        // Maximum width of the image
         max-width : 100%;
+        // Fixed height for the image
         height:480px;
+        // Maximum height for the image
         max-height: 480px;
     }
     figure{
         &.wp-block-gallery-is-layout-flex{
+            // Order of the figure in the flex layout
             order:2;
         }
     }
-    // Utilisation du mixin
+    // Usage of the mixin for slider buttons
     .slider-button {
         &-prev {
+            // Include the mixin for the previous button with order 1
             @include slider-button(1);
         }
         &-next {
+            // Include the mixin for the next button with order 3
             @include slider-button(3);
         }
     }
