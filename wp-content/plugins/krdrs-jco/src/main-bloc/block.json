@@ -1,14 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "test-jcommaret/main-bloc",
+	"name": "krdrs-jco/main-bloc",
 	"version": "0.1.0",
 	"title": "Citeo Top Bloc",
 	"icon": "media-text",
 	"description": "Text & Image & CTA",
 	"example": {},
 	"category": "layout",
-	"textdomain": "test-jcommaret",
+	"textdomain": "krdrs-jco",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css" 

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "test-jcommaret/button-with-arrow",
+	"name": "krdrs-jco/button-with-arrow",
 	"version": "0.1.0",
 	"title": "Citeo - Button",
 	"category": "design",
@@ -13,7 +13,7 @@
             "default": "none"
         }
     },
-	"textdomain": "test-jcommaret",
+	"textdomain": "krdrs-jco",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

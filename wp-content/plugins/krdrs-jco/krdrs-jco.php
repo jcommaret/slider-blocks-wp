@@ -5,10 +5,10 @@
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           citeo 1.beta
- * Author:            Jérôme Commaret
+ * Author:            krdrs-jco
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       test-jcommaret
+ * Text Domain:       krdrs-jco
  */
 
 
@@ -28,9 +28,9 @@ add_action( 'init', 'register_blocks' );
 function citeo_allowed_blocks( $allowed_blocks, $editor_context ) {
     // Liste des blocs autorisés
     $allowed_blocks = array(
-        'test-jcommaret/slider',
-        'test-jcommaret/main-bloc',
-        'test-jcommaret/button-with-arrow'
+        'krdrs-jco/slider',
+        'krdrs-jco/main-bloc',
+        'krdrs-jco/button-with-arrow'
     );
     return $allowed_blocks;
 }

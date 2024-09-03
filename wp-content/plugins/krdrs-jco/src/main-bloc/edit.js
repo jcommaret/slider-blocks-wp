@@ -9,16 +9,16 @@ export default function Edit() {
 		'core/paragraph',
 		'core/media-text',
 		'core/buttons',
-			'test-jcommaret/button-with-arrow',
+			'krdrs-jco/button-with-arrow',
 	]
 	
 	const template = [	
 		[ 'core/media-text', {}, [
 			[ 'core/heading', {} ],	
-			[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'test-jcommaret' ) } ],		
+			[ 'core/paragraph', { placeholder: __( 'Votre contenu', 'krdrs-jco' ) } ],		
 			[ 'core/buttons', {}, [
-				[ 'test-jcommaret/button-with-arrow', {} ],
-				[ 'test-jcommaret/button-with-arrow', {} ],
+				[ 'krdrs-jco/button-with-arrow', {} ],
+				[ 'krdrs-jco/button-with-arrow', {} ],
 			]],
 	
 		]],
