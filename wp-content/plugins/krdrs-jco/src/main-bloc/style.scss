@@ -1,13 +1,1 @@
-
-
-// #TODO
-// Change mediaPosition in block.json attributes and remove this.
-// Couldn't have it to work a this time
-
-.main-bloc {
-    .wp-block{
-        &-media-text {
-            direction: rtl; 
-        }
-    }
-}
+@import "../scss/index.scss";

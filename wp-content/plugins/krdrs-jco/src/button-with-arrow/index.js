@@ -8,7 +8,7 @@ import save from './save';
 import metadata from './block.json';
 
 // Importing the styles for the block
-import "./style.scss";
+import "./../scss/index.scss";
 
 // Registering a new block type with the specified metadata
 registerBlockType( metadata.name, {
