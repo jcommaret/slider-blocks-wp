@@ -1,0 +1,22 @@
+@use "colors.scss" as c;
+
+@use "text.scss" as t;
+
+
+.button-arrow-left,
+.button-arrow-right {
+    .wp-block-button__link {
+        &::before,
+        &::after {
+            margin: 0 0.5em;
+        }
+    }
+}
+
+.button-arrow-left .wp-block-button__link::before {
+    content: "<";
+}
+
+.button-arrow-right .wp-block-button__link::after {
+    content: ">";
+}

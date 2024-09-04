@@ -1,0 +1,13 @@
+@use "partials/text.scss" as t;
+
+.wp-block{
+    &-media-text {
+        direction: t.$text-direction; 
+    }
+}
+
+section.citeo-slider{
+    .wp-block-gallery.item{
+        height:300px;
+    }
+}

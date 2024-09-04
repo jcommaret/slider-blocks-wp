@@ -7,9 +7,6 @@ import save from './save';
 // Importing metadata for the block from a JSON file
 import metadata from './block.json';
 
-// Importing the styles for the block
-import "./../scss/index.scss";
-
 // Registering a new block type with the specified metadata
 registerBlockType( metadata.name, {
 	// Specifying the edit component for the block
