@@ -1,4 +1,4 @@
-# krdrs-jco
+# slider-blocks-jco
 
 ## Extension pour WordPress
 
@@ -29,8 +29,8 @@ A l'origine, c'etait un test d'embauche, j'ai décidé de rendre l'extension pub
 
 Cette extension ajoute les blocks suivants :
 
-- Citeo Slider
-- Citeo Block
+- Slider
+- Block de text avec photo
 
 Ces blocks permettent de générer des sliders et des blocks de contenu pour guttenberg, le nouvel éditeur de contenu de WordPress.
 
