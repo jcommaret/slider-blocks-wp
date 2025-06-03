@@ -19,6 +19,6 @@
 	},
 	"dependencies": {
 		"axios": "^1.8.4",
-		"tar-fs": ">=3.0.8"
+		"tar-fs": "^3.0.9"
 	}
 }
