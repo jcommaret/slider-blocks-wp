@@ -15,10 +15,10 @@
 		"start": "wp-scripts start"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^30.14.1"
+		"@wordpress/scripts": "^30.17.0"
 	},
 	"dependencies": {
-		"axios": "^1.8.4",
-		"tar-fs": ">=3.0.8"
+		"axios": "^1.9.0",
+		"tar-fs": ">=3.0.9"
 	}
 }
