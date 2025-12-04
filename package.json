@@ -12,7 +12,9 @@
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"update-local-packages": "node update-local-packages.js",
+		"update-and-install": "node update-and-install.js"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30.24.0",
@@ -20,6 +22,9 @@
 	},
 	"dependencies": {
 		"axios": "^1.9.0",
+		"button-with-arrow": "file:./src/button-with-arrow",
+		"main-bloc": "file:./src/main-bloc",
+		"slider": "file:./src/slider",
 		"tar-fs": ">=3.0.9",
 		"webpack-dev-server": "^5.2.1"
 	}
