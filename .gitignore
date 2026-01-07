@@ -4,6 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 
 # Coverage directory used by tools like istanbul
 coverage
@@ -13,6 +14,12 @@ build/Release
 
 # Dependency directories
 node_modules/
+# IMPORTANT: Avec NPM Workspaces, ne jamais avoir de node_modules dans les workspaces
+src/*/node_modules/
+
+# Lock files dans les workspaces (un seul à la racine suffit)
+src/*/package-lock.json
+src/*/yarn.lock
 
 # Optional npm cache directory
 .npm
@@ -29,5 +36,20 @@ node_modules/
 # dotenv environment variables file
 .env
 
-
+# Build directories
 build/
+src/*/build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+.SYNTHESE-DOCUMENTATION.txt
