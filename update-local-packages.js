@@ -6,6 +6,10 @@ const path = require('path');
 /**
  * Script pour mettre à jour le package.json parent avec les références 
  * aux composants locaux: button-with-arrow, main-bloc, et slider
+ * 
+ * Note: Ce script est maintenant optionnel avec NPM Workspaces.
+ * Les workspaces gèrent automatiquement les dépendances locales.
+ * Ce script peut être utilisé pour des cas spécifiques de compatibilité.
  */
 
 // Configuration des composants à intégrer
@@ -29,7 +33,7 @@ const COMPONENTS = [
 
 const PARENT_PACKAGE_PATH = './package.json';
 
-console.log('🚀 Mise à jour du package.json parent avec les composants locaux...\n');
+console.log('🚀 Vérification de la configuration des workspaces...\n');
 
 try {
     // Lire le package.json parent
@@ -106,12 +110,22 @@ try {
     console.log(`\n🎉 Mise à jour terminée! ${updatesCount} modification(s) apportée(s).`);
     console.log(`📄 Package.json parent sauvegardé: ${PARENT_PACKAGE_PATH}`);
 
-    // Afficher un résumé des dépendances locales
-    console.log('\n📋 Dépendances locales configurées:');
-    COMPONENTS.forEach(component => {
-        const localRef = parentPackageData.dependencies[component.name] || 'Non configuré';
-        console.log(`   • ${component.name}: ${localRef}`);
-    });
+    // Vérifier si les workspaces sont configurés
+    if (parentPackageData.workspaces && parentPackageData.workspaces.length > 0) {
+        console.log('\n✨ NPM Workspaces détecté!');
+        console.log('📋 Workspaces configurés:');
+        parentPackageData.workspaces.forEach(ws => {
+            console.log(`   • ${ws}`);
+        });
+        console.log('\n💡 Les dépendances communes sont gérées automatiquement par les workspaces.');
+    } else {
+        // Afficher un résumé des dépendances locales (ancien système)
+        console.log('\n📋 Dépendances locales configurées:');
+        COMPONENTS.forEach(component => {
+            const localRef = parentPackageData.dependencies[component.name] || 'Non configuré';
+            console.log(`   • ${component.name}: ${localRef}`);
+        });
+    }
 
     // Proposer d'installer les dépendances automatiquement
     if (updatesCount > 0) {

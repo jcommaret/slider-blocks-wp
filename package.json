@@ -1,20 +1,30 @@
 {
 	"name": "citeo-blocks",
 	"version": "0.1.0",
-	"description": "",
+	"description": "Citeo WordPress Blocks - Monorepo avec workspaces",
 	"author": "krdrs-jco - Citeo test",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
+	"private": true,
+	"workspaces": [
+		"src/button-with-arrow",
+		"src/main-bloc",
+		"src/slider"
+	],
 	"scripts": {
 		"build": "wp-scripts build",
+		"build:all": "npm run build --workspaces",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start",
+		"start:all": "npm run start --workspaces",
 		"update-local-packages": "node update-local-packages.js",
-		"update-and-install": "node update-and-install.js"
+		"update-and-install": "node update-and-install.js",
+		"clean": "rm -rf node_modules src/*/node_modules",
+		"reinstall": "npm run clean && npm install"
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^30.24.0",
@@ -22,9 +32,6 @@
 	},
 	"dependencies": {
 		"axios": "^1.9.0",
-		"button-with-arrow": "file:./src/button-with-arrow",
-		"main-bloc": "file:./src/main-bloc",
-		"slider": "file:./src/slider",
 		"tar-fs": ">=3.0.9",
 		"webpack-dev-server": "^5.2.1"
 	}
