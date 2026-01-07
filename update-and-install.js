@@ -53,3 +53,4 @@ updateScript.on('error', (error) => {
     console.error('❌ Impossible d\'exécuter le script de mise à jour:', error.message);
     process.exit(1);
 });
+
