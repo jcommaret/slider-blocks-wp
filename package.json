@@ -32,6 +32,9 @@
 	},
 	"dependencies": {
 		"axios": "^1.9.0",
+		"button-with-arrow": "file:./src/button-with-arrow",
+		"main-bloc": "file:./src/main-bloc",
+		"slider": "file:./src/slider",
 		"tar-fs": ">=3.0.9",
 		"webpack-dev-server": "^5.2.1"
 	}
